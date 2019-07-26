@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Kode Rally</title>
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Press+Start+2P" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+		<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<article></article>
+		<div class="cover-wrapper">
+			<img src="img/kode-logo.png" alt="">
+			<!--p class="cover-text">Rally</p-->
+		</div>
+		<br>
+		<br>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<form action="">
+						<div class="form-group team-wrapper">
+							<label class="text-white" for="">Equipo 1</label>
+							<input type="text" class="form-control team-score" value="0">
+							<div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
+							<div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
+						</div>
+						<div class="form-group team-wrapper">
+							<label class="text-white" for="">Equipo 2</label>
+							<input type="text" class="form-control team-score" value="0">
+							<div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
+							<div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
+						</div>
+						<div class="form-group team-wrapper">
+							<label class="text-white" for="">Equipo 3</label>
+							<input type="text" class="form-control team-score" value="0">
+							<div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
+							<div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
+						</div>
+					</form>
+					<p class="font-marker text-white h1">Marcador total: <span class="total-score green-text">0</span></p>
+				</div>
+				<div class="col-3 offset-2">
+					<div class="random-wrapper">
+						<div class="category-img-wrapper icon-kode"></div>
+						<div class="difficulty-wrapper">Fácil</div>
+						<div class="btn btn-dark mt-3 btn-large" onclick="toggleRandom(this)">Iniciar</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+		<script>
+		// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyAiiY1BSv6zEyrzu1Ka1Y97-IT5NNlmh0U",
+				authDomain: "cccmarketplace.firebaseapp.com",
+				databaseURL: "https://cccmarketplace.firebaseio.com",
+				projectId: "cccmarketplace",
+				storageBucket: "cccmarketplace.appspot.com",
+				messagingSenderId: "915173126838"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/main2.js"></script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+#some-id{
+	font-style: italic;
+	color: green;
+}
+
+h1{
+	color: peru;
+	font-size: 22px;
+	font-family: arial;
+	text-decoration: underline;
+}
+
+h1{
+	color: navy;
+}
+
+.some-class{
+	text-transform: uppercase;
+	color: pink;
+}
+
+li{
+	font-family: arial;
+}
+
+ul li{
+	font-size: 24px;
+}
+
+ul li:nth-of-type(odd){
+	background: slategray;
+}
+
+ul li:nth-of-type(even){
+	background: limegreen;
+}
+
+button{
+	width: 100px;
+	height: 30px;
+	border: none;
+	background: gray;
+	color: white;
+	border-radius: 5px 3px 1px 7px;
+	text-align: center;
+}
+
+button:hover{
+	background: skyblue;
+	color: black;
+	cursor: pointer
+}
+
+.form-wrapper{
+	width: 80%;
+	padding: 20px;
+	border-radius: 10px;
+	background: #eaeaea;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-wrapper .form-group{
+	width: 100%;
+	border: 1px solid red;
+}
+
+.form-wrapper .form-group label,
+.form-wrapper .form-group input
+{
+	display: block;
+	margin-top: 10px;
+	font-family: arial;
+}
+
+.form-wrapper .form-group input{
+	width: 100%;
+	border-radius: 5px;
+	padding-left: 20px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	height: 30px;
+}
+
+@media (min-width:1024px) {
+	.form-wrapper{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.form-wrapper .form-group{
+		width: 45%;
+	    display: inline-block;
+	    box-sizing: border-box;
+	    flex-shrink: 0;
+	    border: none;
+	}
+}​
