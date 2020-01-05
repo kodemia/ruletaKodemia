@@ -4,6 +4,7 @@ body{
 	background:#333;
 }
 
+/*Animación para intercambiar el ícono de la ruleta*/
 @keyframes randomBackground{
     0% {background:url("../img/isotipo-blanco.png");background-size:cover;}
     25% {background:url("../img/html-5.png");background-size:cover;}
@@ -92,26 +93,28 @@ body{
 	.category-img-wrapper{
 		width:200px;
 		height: 200px;
-		&.randomized{
+		&.randomized{ /*Si agregamos esta clase, la ruleta obtiene la animación de íconos*/
 			animation-name:randomBackground;
 			animation-duration: .3s;
 			animation-iteration-count: infinite;
 		}
-		&.icon-kode{
-			background:url("../img/isotipo-blanco.png");
-			background-size: cover;
-		}
-		&.icon-html{
-			background:url("../img/html-5.png");
-			background-size: cover;
-		}
-		&.icon-css{
-			background:url("../img/css-3.png");
-			background-size: cover;
-		}
-		&.icon-bs{
-			background:url("../img/bootstrap.png");
-			background-size: cover;
+		&.icon-{
+			&kode{
+				background:url("../img/isotipo-blanco.png");
+				background-size: cover;
+			}
+			&html{
+				background:url("../img/html-5.png");
+				background-size: cover;
+			}
+			&css{
+				background:url("../img/css-3.png");
+				background-size: cover;
+			}
+			&bs{
+				background:url("../img/bootstrap.png");
+				background-size: cover;
+			}
 		}
 	}
 	.difficulty-wrapper{

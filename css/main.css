@@ -1,7 +1,31 @@
+@charset "UTF-8";
 body {
   background: #333;
 }
 
+/*Animación para intercambiar el ícono de la ruleta*/
+@-webkit-keyframes randomBackground {
+  0% {
+    background: url("../img/isotipo-blanco.png");
+    background-size: cover;
+  }
+  25% {
+    background: url("../img/html-5.png");
+    background-size: cover;
+  }
+  50% {
+    background: url("../img/css-3.png");
+    background-size: cover;
+  }
+  75% {
+    background: url("../img/bootstrap.png");
+    background-size: cover;
+  }
+  100% {
+    background: url("../img/isotipo-blanco.png");
+    background-size: cover;
+  }
+}
 @keyframes randomBackground {
   0% {
     background: url("../img/isotipo-blanco.png");
@@ -24,6 +48,7 @@ body {
     background-size: cover;
   }
 }
+
 .font-marker {
   font-family: "Permanent Marker", cursive;
 }
@@ -33,17 +58,26 @@ body {
 }
 
 .cover-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .cover-wrapper img {
   width: 40%;
   margin-top: 20px;
 }
+
 .cover-wrapper p {
   color: #1bff00;
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Permanent Marker', cursive;
   width: 50%;
   text-align: right;
   font-size: 30px;
@@ -52,41 +86,57 @@ body {
 }
 
 .team-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: #1bff00;
   width: 100%;
   font-family: "Permanent Marker", cursive;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 30px;
 }
+
 .team-wrapper span {
-  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   font-size: 30px;
   margin-right: 30px;
 }
+
 .team-wrapper input {
   background: black;
   border: 1px solid green;
   color: #1bff00;
   height: 50px;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   text-align: right;
   margin-right: 30px;
   width: 50%;
 }
+
 .team-wrapper .btn {
   width: 50px;
   height: 50px;
   border: 1px solid #1bff00;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 28px;
 }
+
 .team-wrapper .btn.btn-outline-primary {
   border: 1px solid #1bff00;
   color: #1bff00;
 }
+
 .team-wrapper .btn:hover {
   color: #333;
   border: 1px solid #1bff00;
@@ -96,45 +146,63 @@ body {
 
 .random-wrapper {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #1bff00;
   font-family: "Permanent Marker", cursive;
 }
+
 .random-wrapper .category-img-wrapper {
   width: 200px;
   height: 200px;
 }
+
 .random-wrapper .category-img-wrapper.randomized {
-  animation-name: randomBackground;
-  animation-duration: 0.3s;
-  animation-iteration-count: infinite;
+  /*Si agregamos esta clase, la ruleta obtiene la animación de íconos*/
+  -webkit-animation-name: randomBackground;
+          animation-name: randomBackground;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
+
 .random-wrapper .category-img-wrapper.icon-kode {
   background: url("../img/isotipo-blanco.png");
   background-size: cover;
 }
+
 .random-wrapper .category-img-wrapper.icon-html {
   background: url("../img/html-5.png");
   background-size: cover;
 }
+
 .random-wrapper .category-img-wrapper.icon-css {
   background: url("../img/css-3.png");
   background-size: cover;
 }
+
 .random-wrapper .category-img-wrapper.icon-bs {
   background: url("../img/bootstrap.png");
   background-size: cover;
 }
+
 .random-wrapper .difficulty-wrapper {
   margin-top: 20px;
   font-size: 30px;
   text-align: center;
 }
+
 .random-wrapper .btn-dark {
   border: 1px solid white;
   cursor: pointer;
 }
-
 /*# sourceMappingURL=main.css.map */
