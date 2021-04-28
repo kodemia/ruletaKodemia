@@ -69,8 +69,26 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-4 offset-8">
+                <div class="counter-wrapper">
+                    <div class="d-flex flex-column">
+                        <p class="text-white text-center h5">Tiempo restante :  
+                        <span class="green-text" id="countDown">
+                        <input type="text">
+                        <span id="minutes" class="h1"></span>
+                        </span>
+                        </p>
+                        <div class="d-flex justify-content-center">
+                        <div class="btn btn-dark btn-large" id="toggleCounter" onClick="toggleCountDown(this)">Iniciar</div>
+                        <div class="btn btn-dark btn-large ml-3 reset" onClick="resetCountDown(this)">Resetear</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>

@@ -107,3 +107,69 @@ function removeScore(button){
     /*Asigna el puntaje total a la etiqueta de marcador total*/
     $(".total-score").text(totalScore);
 }
+
+let startingMinutes; //  declarando la variable de los minutos que va tener nuestra cuenta atras
+let time;
+let minutesInput = $(".counter-wrapper input");
+// Ingresar los minutos que quiere y cambiar el input a d-none
+function setCountDownMinutes(e) {
+  if (e.keyCode == 13) {
+    startingMinutes = minutesInput.val();
+    time = startingMinutes * 60;
+    minutesInput.addClass("d-none");
+    $("#minutes").removeClass("d-none");
+    $("#minutes").text(`${startingMinutes}:00`);
+  }
+}
+
+$(".counter-wrapper input").keyup(setCountDownMinutes);
+
+// Cambiar al input para ingresar nuevos minutos con doble click
+function toggleEditable() {
+  $("#minutes").addClass("d-none");
+  minutesInput.removeClass("d-none");
+}
+
+$("#minutes").on("dblclick", toggleEditable);
+//Inicializando nuestro tiempo en el counterDown
+let countDown; // Declarando afuera counterDown para usarlos en diferentes funciones
+//Hacer el toggle de inicar y pausar  nuestra cuenta atras
+
+function toggleCountDown(button) {
+  let alarm = new Audio("sounds/countDownEnd.mp3"); // Inicializando un nuevo audio con nuestra alarma
+
+  if ($(button).hasClass("active")) {
+    // Si nuetra cuenta atras esta activa, detenerlo
+    $(button).removeClass("active").text("Inicar");
+    clearInterval(countDown);
+  } else {
+    // Si nuestra cuenta atras esta en pausa o sin iniciar, iniciarla
+    $(button).addClass("active").text("Pausar");
+    countDown = setInterval(() => {
+      const minutes = Math.floor(time / 60);
+      let seconds = time % 60;
+      if (minutes == 0 && seconds == 00) {
+        clearInterval(countDown);
+        $("#minutes").text(`${minutes}:${seconds}0`);
+        alarm.play();
+      } else {
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        $("#minutes").text(`${minutes}:${seconds}`);
+        time--;
+      }
+    }, 1000);
+  }
+}
+
+/*Resetear mi cuentra atras y regresar el boton del toggle al estado inicial  */
+function resetCountDown(button) {
+  startingMinutes; // Reseteando los minutos que va tener nuestra cuenta atras
+  time = startingMinutes * 60; // Reseteando nuestro tiempo en el counterDown
+  let toggleButton = $("#toggleCounter");
+  if (toggleButton.hasClass("active")) {
+    toggleButton.removeClass("active").text("Inicar"); // Regresar al estado original mi boton de iniciar
+    clearInterval(countDown); //para mi cuentra atras
+    $("#minutes").html(`${startingMinutes}:00`); // Pintar los mi contador reseteado
+    countDown; // llamando de nuevo counterDown para que se reinicie
+  }
+}
