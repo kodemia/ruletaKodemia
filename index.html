@@ -1,79 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kode Rally</title>
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Press+Start+2P" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker|Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<body>
+  <body>
     <div class="cover-wrapper">
-        <img src="img/kode-logo.png" alt="">
+      <img src="img/kode-logo.png" alt="" />
     </div>
-    <br>
+    <br />
     <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <form action="">
-                    <div class="form-group team-wrapper">
-                        <label class="text-white" for="">Equipo 1</label>
-                        <input type="text" class="form-control team-score" value="0">
-                        <div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
-                        <div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
-                    </div>
-                    <div class="form-group team-wrapper">
-                        <label class="text-white" for="">Equipo 2</label>
-                        <input type="text" class="form-control team-score" value="0">
-                        <div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
-                        <div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
-                    </div>
-                    <div class="form-group team-wrapper">
-                        <label class="text-white" for="">Equipo 3</label>
-                        <input type="text" class="form-control team-score" value="0">
-                        <div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
-                        <div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
-                    </div>
-                    <div class="form-group team-wrapper">
-                        <label class="text-white" for="">Equipo 4</label>
-                        <input type="text" class="form-control team-score" value="0">
-                        <div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
-                        <div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
-                    </div>
-                    <div class="form-group team-wrapper">
-                        <label class="text-white" for="">Equipo 5</label>
-                        <input type="text" class="form-control team-score" value="0">
-                        <div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
-                        <div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
-                    </div>
-                    <div class="form-group team-wrapper">
-                        <label class="text-white" for="">Equipo 6</label>
-                        <input type="text" class="form-control team-score" value="0">
-                        <div class="btn btn-secondary" onclick="addScore(this)">&#10004;</div>
-                        <div class="btn btn-danger" onclick="removeScore(this)">&#10008;</div>
-                    </div>
-                </form>
-                <p class="font-marker text-white h1">Marcador total: <span class="total-score green-text">0</span></p>
+      <div class="row">
+        <div class="col-6">
+          <form action="">
+            <div class="form-group team-wrapper">
+              <label class="text-white" for="">Equipo 1</label>
+              <input type="text" class="form-control team-score" value="0" />
+              <div class="btn btn-secondary" onclick="addScore(this)">
+                &#10004;
+              </div>
+              <div class="btn btn-danger" onclick="removeScore(this)">
+                &#10008;
+              </div>
             </div>
-            <div class="col-3 offset-2">
-                <div class="random-wrapper">
-                    <div class="category-img-wrapper icon-kode"></div>
-                    <div class="difficulty-wrapper"></div>
-                    <div class="btn btn-dark mt-3 btn-large" onclick="toggleRandom(this)">Iniciar</div>
-                </div>
+            <div class="form-group team-wrapper">
+              <label class="text-white" for="">Equipo 2</label>
+              <input type="text" class="form-control team-score" value="0" />
+              <div class="btn btn-secondary" onclick="addScore(this)">
+                &#10004;
+              </div>
+              <div class="btn btn-danger" onclick="removeScore(this)">
+                &#10008;
+              </div>
             </div>
+            <div class="form-group team-wrapper">
+              <label class="text-white" for="">Equipo 3</label>
+              <input type="text" class="form-control team-score" value="0" />
+              <div class="btn btn-secondary" onclick="addScore(this)">
+                &#10004;
+              </div>
+              <div class="btn btn-danger" onclick="removeScore(this)">
+                &#10008;
+              </div>
+            </div>
+            <div class="form-group team-wrapper">
+              <label class="text-white" for="">Equipo 4</label>
+              <input type="text" class="form-control team-score" value="0" />
+              <div class="btn btn-secondary" onclick="addScore(this)">
+                &#10004;
+              </div>
+              <div class="btn btn-danger" onclick="removeScore(this)">
+                &#10008;
+              </div>
+            </div>
+            <div class="form-group team-wrapper">
+              <label class="text-white" for="">Equipo 5</label>
+              <input type="text" class="form-control team-score" value="0" />
+              <div class="btn btn-secondary" onclick="addScore(this)">
+                &#10004;
+              </div>
+              <div class="btn btn-danger" onclick="removeScore(this)">
+                &#10008;
+              </div>
+            </div>
+            <div class="form-group team-wrapper">
+              <label class="text-white" for="">Equipo 6</label>
+              <input type="text" class="form-control team-score" value="0" />
+              <div class="btn btn-secondary" onclick="addScore(this)">
+                &#10004;
+              </div>
+              <div class="btn btn-danger" onclick="removeScore(this)">
+                &#10008;
+              </div>
+            </div>
+          </form>
+          <p class="font-marker text-white h1">
+            Marcador total: <span class="total-score green-text">0</span>
+          </p>
         </div>
+        <div class="col-3 offset-2">
+          <div class="random-wrapper">
+            <div class="category-img-wrapper icon-kode"></div>
+            <div class="difficulty-wrapper"></div>
+            <div
+              class="btn btn-dark mt-3 btn-large"
+              onclick="toggleRandom(this)"
+            >
+              Iniciar
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 offset-8">
+          <div class="counter-wrapper">
+            <div class="d-flex flex-column">
+              <p class="text-white text-center h5">
+                Tiempo restante :
+                <span class="green-text" id="countDown">
+                  <input type="text" />
+                  <span id="minutes" class="h1"></span>
+                </span>
+              </p>
+              <div class="d-flex justify-content-center">
+                <div
+                  class="btn btn-dark btn-large"
+                  id="toggleCounter"
+                  onClick="toggleCountDown(this)"
+                >
+                  Iniciar
+                </div>
+                <div
+                  class="btn btn-dark btn-large ml-3 reset"
+                  onClick="resetCountDown(this)"
+                >
+                  Resetear
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

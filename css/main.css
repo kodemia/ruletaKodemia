@@ -208,4 +208,23 @@ body {
   border: 1px solid white;
   cursor: pointer;
 }
+
+.counter-wrapper {
+  font-family: "Permanent Marker", cursive;
+}
+
+.counter-wrapper input {
+  background: black;
+  border: 1px solid green;
+  color: #1bff00;
+  height: 35px;
+  font-family: 'Press Start 2P', cursive;
+  text-align: right;
+  width: 20%;
+}
+
+.counter-wrapper .btn-dark {
+  border: 1px solid white;
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */
