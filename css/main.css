@@ -213,10 +213,6 @@ body {
   font-family: "Permanent Marker", cursive;
 }
 
-.counter-wrapper .edited {
-  display: none;
-}
-
 .counter-wrapper input {
   background: black;
   border: 1px solid green;
